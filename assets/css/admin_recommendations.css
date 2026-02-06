@@ -1,0 +1,805 @@
+/* ===================================== */
+/* CSS VARIABLES                        */
+/* ===================================== */
+:root {
+    --primary: #5271ff;
+    --secondary: #ff6b6b;
+    --dark: #2c3e50;
+    --light: #f8f9fa;
+    --success: #2ecc71;
+    --border: #e9ecef;
+    --shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* ===================================== */
+/* GLOBAL RESET                         */
+/* ===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ===================================== */
+/* CONTAINER                            */
+/* ===================================== */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--shadow);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+/* ===================================== */
+/* HEADER                               */
+/* ===================================== */
+.header {
+    background: var(--primary);
+    color: white;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header p {
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* ===================================== */
+/* FORM STYLES                          */
+/* ===================================== */
+.form-container {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(82, 113, 255, 0.1);
+    outline: none;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* ===================================== */
+/* BUTTONS                              */
+/* ===================================== */
+.btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: #4262e8;
+    transform: translateY(-2px);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.back-link {
+    color: #6c757d;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.back-link i {
+    margin-right: 5px;
+}
+
+.back-link:hover {
+    color: var(--dark);
+}
+
+.delete-btn {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.delete-btn:hover {
+    background: #e55555;
+    transform: scale(1.05);
+}
+
+/* ===================================== */
+/* RECOMMENDATIONS SECTION              */
+/* ===================================== */
+.recommendations-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.recommendations-header {
+    background: var(--primary);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px 12px 0 0;
+}
+
+.recommendations-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.recommendations-header h2 i {
+    margin-right: 10px;
+}
+
+.recommendations-list {
+    background: white;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 20px var(--shadow);
+    padding: 20px;
+}
+
+.recommendation-card {
+    background: var(--light);
+    border-left: 4px solid var(--primary);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recommendation-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.recommendation-card:last-child {
+    margin-bottom: 0;
+}
+
+.recommendation-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.recommendation-description {
+    color: #6c757d;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.recommendation-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+}
+
+.meta-item i {
+    color: var(--primary);
+    margin-right: 6px;
+}
+
+.no-recommendations {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+}
+
+.no-recommendations i {
+    font-size: 48px;
+    color: var(--border);
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* ===================================== */
+/* RESPONSIVE DESIGN                    */
+/* ===================================== */
+
+/* Large Desktop (1440px and above) */
+@media (min-width: 1440px) {
+    .container,
+    .recommendations-section {
+        max-width: 900px;
+    }
+}
+
+/* Desktop (1200px - 1439px) */
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .container,
+    .recommendations-section {
+        max-width: 850px;
+    }
+}
+
+/* Tablet Landscape (992px - 1199px) */
+@media (max-width: 1199px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container,
+    .recommendations-section {
+        max-width: 100%;
+    }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (max-width: 991px) {
+    body {
+        padding: 12px;
+    }
+    
+    .header,
+    .recommendations-header {
+        padding: 18px 25px;
+    }
+    
+    .header h2,
+    .recommendations-header h2 {
+        font-size: 22px;
+    }
+    
+    .form-container,
+    .recommendations-list {
+        padding: 25px;
+    }
+}
+
+/* Mobile & Small Tablet (768px and below) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    
+    /* Header */
+    .header,
+    .recommendations-header {
+        padding: 16px 20px;
+    }
+    
+    .header h2,
+    .recommendations-header h2 {
+        font-size: 20px;
+    }
+    
+    .header p {
+        font-size: 14px;
+    }
+    
+    /* Form */
+    .form-container,
+    .recommendations-list {
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        font-size: 15px;
+    }
+    
+    .form-control {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+    
+    textarea.form-control {
+        min-height: 120px;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    .btn-container {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 12px;
+    }
+    
+    .btn-container .btn {
+        width: 100%;
+    }
+    
+    .back-link {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    /* Recommendations */
+    .recommendation-card {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .recommendation-title {
+        font-size: 18px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .recommendation-description {
+        font-size: 15px;
+    }
+    
+    .recommendation-meta {
+        gap: 12px;
+        font-size: 13px;
+    }
+    
+    .delete-btn {
+        padding: 5px 10px;
+        font-size: 13px;
+        align-self: flex-start;
+    }
+    
+    .no-recommendations {
+        padding: 30px;
+    }
+    
+    .no-recommendations i {
+        font-size: 40px;
+    }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+    
+    .container {
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+    
+    /* Header */
+    .header,
+    .recommendations-header {
+        padding: 14px 16px;
+    }
+    
+    .header h2,
+    .recommendations-header h2 {
+        font-size: 18px;
+    }
+    
+    .recommendations-header h2 i {
+        margin-right: 8px;
+        font-size: 18px;
+    }
+    
+    .header p {
+        font-size: 13px;
+        margin-top: 4px;
+    }
+    
+    /* Form */
+    .form-container,
+    .recommendations-list {
+        padding: 16px;
+    }
+    
+    .form-group {
+        margin-bottom: 18px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    .form-control {
+        padding: 9px 11px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    
+    textarea.form-control {
+        min-height: 100px;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 9px 18px;
+        font-size: 14px;
+    }
+    
+    .btn-container {
+        gap: 10px;
+    }
+    
+    .back-link {
+        font-size: 14px;
+    }
+    
+    /* Recommendations */
+    .recommendation-card {
+        padding: 14px;
+        margin-bottom: 14px;
+        border-radius: 6px;
+    }
+    
+    .recommendation-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .recommendation-description {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .recommendation-meta {
+        gap: 10px;
+        font-size: 12px;
+    }
+    
+    .meta-item i {
+        margin-right: 4px;
+    }
+    
+    .delete-btn {
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+    
+    .no-recommendations {
+        padding: 25px 15px;
+        font-size: 14px;
+    }
+    
+    .no-recommendations i {
+        font-size: 36px;
+        margin-bottom: 12px;
+    }
+}
+
+/* Extra Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    body {
+        padding: 6px;
+    }
+    
+    .container {
+        border-radius: 6px;
+    }
+    
+    .header,
+    .recommendations-header {
+        padding: 12px 14px;
+    }
+    
+    .header h2,
+    .recommendations-header h2 {
+        font-size: 16px;
+    }
+    
+    .recommendations-header h2 i {
+        font-size: 16px;
+    }
+    
+    .header p {
+        font-size: 12px;
+    }
+    
+    .form-container,
+    .recommendations-list {
+        padding: 14px;
+    }
+    
+    .form-group {
+        margin-bottom: 16px;
+    }
+    
+    .form-group label {
+        font-size: 13px;
+    }
+    
+    .form-control {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+    
+    textarea.form-control {
+        min-height: 90px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .back-link {
+        font-size: 13px;
+    }
+    
+    .recommendation-card {
+        padding: 12px;
+    }
+    
+    .recommendation-title {
+        font-size: 15px;
+    }
+    
+    .recommendation-description {
+        font-size: 13px;
+    }
+    
+    .recommendation-meta {
+        font-size: 11px;
+        gap: 8px;
+    }
+    
+    .delete-btn {
+        font-size: 11px;
+        padding: 3px 7px;
+    }
+    
+    .no-recommendations {
+        padding: 20px 12px;
+        font-size: 13px;
+    }
+    
+    .no-recommendations i {
+        font-size: 32px;
+    }
+}
+
+/* ===================================== */
+/* LANDSCAPE ORIENTATION                */
+/* ===================================== */
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        padding: 10px;
+    }
+    
+    .header,
+    .recommendations-header {
+        padding: 14px 20px;
+    }
+    
+    .form-container,
+    .recommendations-list {
+        padding: 18px 20px;
+    }
+    
+    textarea.form-control {
+        min-height: 100px;
+    }
+    
+    .btn-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .btn-container .btn {
+        width: auto;
+    }
+}
+
+/* ===================================== */
+/* PRINT STYLES                         */
+/* ===================================== */
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+    
+    .container,
+    .recommendations-section {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+    
+    .header,
+    .recommendations-header {
+        background: #5271ff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .btn,
+    .delete-btn,
+    .back-link {
+        display: none !important;
+    }
+    
+    .recommendation-card {
+        page-break-inside: avoid;
+        margin-bottom: 15px;
+    }
+    
+    .recommendation-card:hover {
+        transform: none;
+    }
+}
+
+/* ===================================== */
+/* ACCESSIBILITY                        */
+/* ===================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+.form-control:focus,
+.btn:focus,
+.delete-btn:focus,
+.back-link:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .container,
+    .recommendations-list {
+        border: 2px solid #000;
+    }
+    
+    .recommendation-card {
+        border-left-width: 6px;
+    }
+    
+    .btn,
+    .delete-btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* ===================================== */
+/* LOADING STATE (OPTIONAL)             */
+/* ===================================== */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.8s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ===================================== */
+/* UTILITY CLASSES                      */
+/* ===================================== */
+.text-center {
+    text-align: center;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-danger {
+    color: var(--secondary);
+}
+
+.text-success {
+    color: var(--success);
+}

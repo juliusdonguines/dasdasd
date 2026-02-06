@@ -1,0 +1,455 @@
+/* Add some additional styling for the document section */
+.document-section-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a5568;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 5px;
+}
+
+.empty-state {
+    color: #a0aec0;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.profile-detail {
+    margin-bottom: 10px;
+}
+
+/* Base Styles with preserved color scheme */
+:root {
+    --primary: #2e4057;
+    --secondary: #048ba8;
+    --accent: #16db93;
+    --light: #f6f8fa;
+    --dark: #2d3748;
+    --gray: #718096;
+    --light-gray: #e2e8f0;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Layout with improved spacing and structure */
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.profile-header {
+    background: linear-gradient(135deg, var(--primary) 0%, #1c2b3c 100%);
+    color: white;
+    border-radius: var(--border-radius);
+    padding: 24px 30px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.header-title h1 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+}
+
+/* Enhanced Profile Card */
+.profile-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+.profile-image-container {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--light-gray);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.03);
+}
+
+.profile-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, var(--secondary) 0%, #036d85 100%);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+}
+
+.profile-info {
+    padding: 25px;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.profile-username {
+    color: var(--gray);
+    font-size: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+}
+
+.profile-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.stars {
+    color: #f7b731;
+    letter-spacing: 3px;
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.review-count {
+    color: var(--gray);
+    font-size: 15px;
+}
+
+.profile-divider {
+    height: 1px;
+    background: linear-gradient(to right, var(--light-gray) 0%, rgba(226, 232, 240, 0.3) 100%);
+    margin: 24px 0;
+}
+
+.profile-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom:
+    15px;
+    transition: transform 0.15s ease;
+}
+
+.profile-detail:hover {
+    transform: translateX(3px);
+}
+
+.profile-detail i {
+    color: var(--secondary);
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.profile-label {
+    font-weight: 500;
+    margin-right: 8px;
+    color: var(--dark);
+}
+
+.profile-value {
+    color: var(--gray);
+    word-break: break-word;
+}
+
+.service-fee {
+    background: linear-gradient(to right, #f8fafc 0%, var(--light) 100%);
+    padding: 18px;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-left: 3px solid var(--secondary);
+}
+
+.fee-label {
+    font-weight: 600;
+    color: var(--dark);
+    letter-spacing: 0.3px;
+}
+
+.fee-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+/* Improved Reviews Section */
+.reviews-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.3px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.section-title i {
+    color: var(--secondary);
+}
+
+.review-card {
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 18px;
+    margin-bottom: 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 16px;
+}
+
+.review-date {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.review-stars {
+    color: #f7b731;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.review-comment {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.review-feedback {
+    background-color: var(--light);
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
+    font-style: italic;
+    border-left: 3px solid var(--accent);
+    margin-top: 5px;
+}
+
+.no-reviews {
+    text-align: center;
+    color: var(--gray);
+    padding: 40px 20px;
+}
+
+/* Enhanced Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 18px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    gap: 8px;
+    letter-spacing: 0.3px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, #1d2b3b 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 3px 10px rgba(46, 64, 87, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #263548 0%, #16212e 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 64, 87, 0.4);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced Resume Link */
+.resume-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 15px;
+    padding: 6px 0;
+    transition: all 0.2s ease;
+}
+
+.resume-link i {
+    margin-right: 8px;
+}
+
+.resume-link:hover {
+    color: #036d85;
+    transform: translateX(3px);
+}
+
+/* Enhanced Document Section */
+.document-section-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark);
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 8px;
+    letter-spacing: 0.3px;
+}
+
+.empty-state {
+    color: #a0aec0;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Document links styling */
+.profile-detail a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block;
+    padding: 2px 0;
+}
+
+.profile-detail a:hover {
+    color: #036d85;
+    transform: translateX(3px);
+}
+
+/* Skills Tags */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, var(--light) 0%, #e6edf5 100%);
+    color: var(--secondary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(4, 139, 168, 0.1);
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-card, .reviews-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-container {
+        padding: 15px;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .profile-image-container {
+        height: 180px;
+    }
+}
